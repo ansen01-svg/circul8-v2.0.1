@@ -1,0 +1,389 @@
+@import "vars";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+//products page------------------------------------------------
+//header--------------------------
+.header {
+  width: 100vw;
+  max-width: 100vw;
+  height: 10vh;
+  background-color: $blue2;
+
+  @include flex(row, 0);
+
+  .logo_holder {
+    width: 40%;
+    height: 100%;
+    // background-color: bisque;
+
+    @include flex(row, 20px);
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      // color: white;
+
+      .logo_span {
+        color: $red;
+      }
+    }
+  }
+
+  .search_holder {
+    width: 60%;
+    height: 100%;
+    // background-color: black;
+
+    @include flex(row, 0);
+
+    form {
+      width: 100%;
+      height: 100%;
+      // background-color: aliceblue;
+
+      @include flex(row, 0);
+
+      input {
+        width: 90%;
+        height: 55%;
+        border: none;
+        outline: none;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        padding-left: 10px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+      }
+      button {
+        width: 10%;
+        height: 55%;
+        border: none;
+        outline: none;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background: rgba(0, 0, 0, 0.85);
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+
+        @include flex(column, 0);
+      }
+    }
+  }
+
+  .bag_and_profile_holder {
+    width: 40%;
+    height: 100%;
+    // background-color: bisque;
+    position: relative;
+
+    @include flex(row, 30px);
+
+    .profile_pic_span {
+      color: $red;
+      cursor: pointer;
+      // font-weight: bold;
+
+      @include flex(row, 0);
+    }
+    .bag_icon {
+      font-size: 20px;
+      color: $red;
+      cursor: pointer;
+    }
+    .bag_amount_holder {
+      font-size: 17px;
+      position: absolute;
+      top: 25%;
+      right: 39%;
+    }
+
+    .profile_modal {
+      position: absolute;
+      top: 80%;
+      right: 45%;
+      width: 13.5vw;
+      // height: 30vh;
+      border-radius: 5px;
+      box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.15),
+        -2px 0 2px rgba(0, 0, 0, 0.15);
+      background-color: white;
+      z-index: 5;
+      @include flex(column, 0);
+      padding: 5px 0;
+      display: none;
+
+      p {
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .welcome_span {
+        width: 100%;
+        height: 7.5vh;
+        @include flex(column, 0);
+        align-items: flex-start;
+        padding-left: 20px;
+      }
+      .modal_span {
+        width: 100%;
+        height: 7.5vh;
+        // background-color: aqua;
+        border-top: 0.1px solid $border_color;
+        @include flex(row, 10px);
+        justify-content: flex-start;
+        padding-left: 20px;
+      }
+    }
+    .show {
+      display: block;
+    }
+    .hide {
+      display: none;
+    }
+  }
+}
+
+//loading div---------------------
+.loading_div {
+  width: 100vw;
+  max-width: 100vw;
+  height: 90vh;
+  background: $blue3;
+  color: gray;
+
+  @include flex(column, 20px);
+
+  .loading_icon {
+    font-size: 50px;
+  }
+}
+
+//main----------------------------
+.main {
+  width: 100vw;
+  max-width: 100vw;
+  // height: 90vh;
+  position: realtive;
+  background: white;
+
+  .login_form_holder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    @include flex(column, 0);
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 5;
+
+    .close_button {
+      position: absolute;
+      top: 50px;
+      right: 80px;
+      font-size: 40px;
+      color: white;
+      z-index: 5;
+      cursor: pointer;
+    }
+
+    .form_holder {
+      width: 25vw;
+      height: 70vh;
+      z-index: 5;
+      background-color: white;
+      border-radius: 5px;
+      // padding: 20px;
+
+      form {
+        width: 100%;
+        height: 100%;
+        // background-color: aqua;
+        @include flex(column, 0);
+        padding: 5px 0;
+
+        div {
+          width: 100%;
+          height: 21.25%;
+          // background-color: beige;
+          @include flex(column, 10px);
+
+          input {
+            @include input(85%, 45%);
+          }
+
+          button {
+            width: 85%;
+            height: 45%;
+            border: none;
+            outline: none;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            border-radius: 3px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          p {
+            font-size: 13px;
+            font-weight: bold;
+            // color: $green;
+            color: rgb(49, 49, 255);
+          }
+        }
+
+        .login_form_header {
+          width: 100%;
+          height: 10%;
+
+          p {
+            font-size: 20px;
+            font-weight: bold;
+            color: orangered;
+          }
+        }
+      }
+      .hide {
+        display: none;
+      }
+    }
+  }
+  .show {
+    display: block;
+    @include flex(column, 0);
+  }
+
+  .products_sub_holder {
+    width: 100vw;
+    max-width: 100vw;
+    // background-color: $blue3;
+
+    @include flex(column, 0);
+  }
+
+  .products_main_holder {
+    width: 78vw;
+    max-width: 78vw;
+    height: 132vh;
+    // background-color: $blue3;
+    padding: 4vw 0 0vw 0;
+
+    @include grid(4, 2vw);
+
+    .single_product_holder {
+      width: 18vw;
+      height: 37vh;
+      background-color: white;
+      padding: 0 0 5px 0;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+
+      .image_holder {
+        width: 100%;
+        height: 55%;
+        // background: yellow;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          cursor: pointer;
+        }
+      }
+      .details_holder {
+        width: 100%;
+        height: 45%;
+        // background-color: aqua;
+        padding: 20px;
+        font-size: 17px;
+        position: relative;
+
+        @include flex(column, 5px);
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .gray_p {
+          color: gray;
+          font-size: 15px;
+        }
+
+        .add_to_cart {
+          position: absolute;
+          width: 60px;
+          height: 30px;
+          bottom: 30%;
+          right: 20px;
+          border: 0.1px solid rgb(17, 236, 17);
+          border-radius: 3px;
+          outline: none;
+          background: none;
+          color: rgb(17, 236, 17);
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 14px;
+          display: none;
+          cursor: pointer;
+        }
+      }
+
+      &:hover {
+        box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1),
+          -1px 0 2px rgba(0, 0, 0, 0.1);
+      }
+      &:hover .add_to_cart {
+        display: block;
+      }
+    }
+  }
+
+  .page_holder {
+    width: 100vw;
+    max-width: 100vw;
+    height: 10vh;
+    // background: green;
+
+    @include flex(row, 10px);
+
+    p{
+      cursor:pointer;
+    }
+  }
+}
+
+//footer--------------------------
+.footer {
+  width: 100vw;
+  max-width: 100vw;
+  height: 25vh;
+  background-color: $navy_blue;
+
+  @include flex(row, 10px);
+
+  p {
+    font-size: 16px;
+    color: white;
+  }
+}

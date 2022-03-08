@@ -1,0 +1,636 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.header {
+  width: 100vw;
+  max-width: 100vw;
+  height: 10vh;
+  background-color: #b9dcfa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+}
+
+.header .logo_holder {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.header .logo_holder .logo {
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header .logo_holder .logo .logo_span {
+  color: #fc2e2e;
+}
+
+.header .search_holder {
+  width: 60%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+}
+
+.header .search_holder form {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+}
+
+.header .search_holder form input {
+  width: 90%;
+  height: 55%;
+  border: none;
+  outline: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding-left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+
+.header .search_holder form button {
+  width: 10%;
+  height: 55%;
+  border: none;
+  outline: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: rgba(0, 0, 0, 0.85);
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+}
+
+.header .bag_and_profile_holder {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+.header .bag_and_profile_holder .profile_pic_span {
+  color: #fc2e2e;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+}
+
+.header .bag_and_profile_holder .bag_icon {
+  font-size: 20px;
+  color: #fc2e2e;
+  cursor: pointer;
+}
+
+.header .bag_and_profile_holder .bag_amount_holder {
+  font-size: 17px;
+  position: absolute;
+  top: 25%;
+  right: 39%;
+}
+
+.header .bag_and_profile_holder .profile_modal {
+  position: absolute;
+  top: 80%;
+  right: 45%;
+  width: 13.5vw;
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.15), -2px 0 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.15), -2px 0 2px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+  padding: 5px 0;
+  display: none;
+}
+
+.header .bag_and_profile_holder .profile_modal p {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.header .bag_and_profile_holder .profile_modal .welcome_span {
+  width: 100%;
+  height: 7.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 20px;
+}
+
+.header .bag_and_profile_holder .profile_modal .modal_span {
+  width: 100%;
+  height: 7.5vh;
+  border-top: 0.1px solid #e0d7d7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.header .bag_and_profile_holder .show {
+  display: block;
+}
+
+.header .bag_and_profile_holder .hide {
+  display: none;
+}
+
+.loading_div {
+  width: 100vw;
+  max-width: 100vw;
+  height: 90vh;
+  background: #eff4fa;
+  color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.loading_div .loading_icon {
+  font-size: 50px;
+}
+
+.main {
+  width: 100vw;
+  max-width: 100vw;
+  position: realtive;
+  background: white;
+}
+
+.main .login_form_holder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 5;
+}
+
+.main .login_form_holder .close_button {
+  position: absolute;
+  top: 50px;
+  right: 80px;
+  font-size: 40px;
+  color: white;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.main .login_form_holder .form_holder {
+  width: 25vw;
+  height: 70vh;
+  z-index: 5;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.main .login_form_holder .form_holder form {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+  padding: 5px 0;
+}
+
+.main .login_form_holder .form_holder form div {
+  width: 100%;
+  height: 21.25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.main .login_form_holder .form_holder form div input {
+  width: 85%;
+  height: 45%;
+  outline: none;
+  border: 4px solid gray;
+  background: none;
+  padding-left: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  border-radius: 3px;
+}
+
+.main .login_form_holder .form_holder form div button {
+  width: 85%;
+  height: 45%;
+  border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  border-radius: 3px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main .login_form_holder .form_holder form div p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #3131ff;
+}
+
+.main .login_form_holder .form_holder form .login_form_header {
+  width: 100%;
+  height: 10%;
+}
+
+.main .login_form_holder .form_holder form .login_form_header p {
+  font-size: 20px;
+  font-weight: bold;
+  color: orangered;
+}
+
+.main .login_form_holder .form_holder .hide {
+  display: none;
+}
+
+.main .show {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+}
+
+.main .products_sub_holder {
+  width: 100vw;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+}
+
+.main .products_main_holder {
+  width: 78vw;
+  max-width: 78vw;
+  height: 132vh;
+  padding: 4vw 0 0vw 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  gap: 2vw;
+}
+
+.main .products_main_holder .single_product_holder {
+  width: 18vw;
+  height: 37vh;
+  background-color: white;
+  padding: 0 0 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.main .products_main_holder .single_product_holder .image_holder {
+  width: 100%;
+  height: 55%;
+}
+
+.main .products_main_holder .single_product_holder .image_holder img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+}
+
+.main .products_main_holder .single_product_holder .details_holder {
+  width: 100%;
+  height: 45%;
+  padding: 20px;
+  font-size: 17px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main .products_main_holder .single_product_holder .details_holder .gray_p {
+  color: gray;
+  font-size: 15px;
+}
+
+.main .products_main_holder .single_product_holder .details_holder .add_to_cart {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  bottom: 30%;
+  right: 20px;
+  border: 0.1px solid #11ec11;
+  border-radius: 3px;
+  outline: none;
+  background: none;
+  color: #11ec11;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  display: none;
+  cursor: pointer;
+}
+
+.main .products_main_holder .single_product_holder:hover {
+  -webkit-box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1), -1px 0 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1), -1px 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.main .products_main_holder .single_product_holder:hover .add_to_cart {
+  display: block;
+}
+
+.main .page_holder {
+  width: 100vw;
+  max-width: 100vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.main .page_holder p {
+  cursor: pointer;
+}
+
+.footer {
+  width: 100vw;
+  max-width: 100vw;
+  height: 25vh;
+  background-color: #20485f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.footer p {
+  font-size: 16px;
+  color: white;
+}
+/*# sourceMappingURL=index.css.map */
