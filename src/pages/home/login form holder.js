@@ -29,6 +29,7 @@ let LoginFormHolder = ({setOpenLoginHolder, openLoginHolder}) => {
             try {
                let { data } = await axios.post(`/apis/v2/authentication/register`, 
                { username, email, password }) 
+               console.log(data)
                
                setUsername('')
                setEmail('')

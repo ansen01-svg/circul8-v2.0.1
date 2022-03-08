@@ -13,6 +13,7 @@ let ProfileModal = ({openProfileModal,setOpenProfileModal,checkCookie}) => {
     let logoutUser = async () => {
         try {
             let { data } = await axios.get(`/apis/v2/authentication/logout`)
+            console.log(data)
             document.cookie = 'domCookie=;Max-Age=0'
             checkCookie()
             setOpenProfileModal(false)
